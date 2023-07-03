@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<div layout:fragment="content">
+  <div class="content">
+    <div class="buttons">
+      <button type="button" class="btn btn-outline-primary btn-sm">Excel Upload</button>
+      <button type="button" class="btn btn-outline-success btn-sm">Excel Download</button>
+    </div>
+    <div class="tableBox">
+      <div class="tables">
+        <table class="table">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">연계명</th>
+            <th scope="col">연계설명</th>
+            <th scope="col">대내/외</th>
+            <th scope="col">연계방식</th>
+            <th scope="col">송신</th>
+            <th scope="col">수신</th>
+            <th scope="col">To-Be담당</th>
+            <th scope="col">확정여부</th>
+            <!-- <th scope="col">삭제여부</th> -->
+            <!-- <th scope="col">통합여부</th> -->
+            <th scope="col">비고</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Email 전송</td>
+            <td>DR는 CBP에게 EMAIL 정보를 전송(확인필요)</td>
+            <td>대내</td>
+            <td>DB Link</td>
+            <td>DR</td>
+            <td>CBP</td>
+            <td>시스템관리</td>
+            <td>O</td>
+            <td>-</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<div th:fragment="header">
+    <header>
+        <!-- 화면 변경 크기와 navbar의 배경색, 글자색 변경 -->
+        <!-- 화면 위쪽에 고정하기 위해 fixed-top 클래스 추가 -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <!-- navbar-brand의 content 변경 -->
+            <a class="navbar-brand" href="#">MMS(차세대전력거래시스템)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">인터페이스 목록<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">인터페이스 상세</a>
+                    </li>
+                    <!-- dropdown 메뉴 삭제 -->
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">관리자</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <select class="custom-select mr-2">
+                        <option selected>연계명</option>
+                        <option value="1">송신</option>
+                        <option value="2">수신</option>
+                        <option value="3">To-Be담당</option>
+                    </select>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+</div>
+
+</html>

@@ -1,0 +1,47 @@
+#Application Port
+server:
+  port: 80
+
+#MySQL Connection Setting
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shop?serverTimezone=UTC
+    username: root
+    password: root
+  #AUTO DB SCHEMA EXCUTION
+    schema: classpath:schema.sql
+    initialization-mode: always
+  #print query on console
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        #print query on console(good format)
+        format_sql: true
+    hibernate:
+      ddl-auto: create # ? ??? JPA-DDL AUTO ??(???? ??? ?? ??? ?? ? ??? ??, ? ??? none, create-drop, update, validate ? ??)
+    database-platform: org.hibernate.dialect.MySQL8Dialect #MySql ??? ??(??? ???? ??????? MySQL??? JPA? MySQL8Dialect? ????? ????
+  #actvation Live Reload
+  devtools:
+    livereload:
+      enabled: true
+  #Thymeleaf cache stop using
+  thymeleaf:
+    cache: false
+
+
+
+#query print bind parameter(do not use question(?) mark)
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
+
+
+
+
+
